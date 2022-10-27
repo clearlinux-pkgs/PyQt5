@@ -21,6 +21,7 @@ libQt5Sensors.so.5
 libQt5SerialPort.so.5
 libQt5Sql.so.5
 libQt5Svg.so.5
+libQt5TextToSpeech.so.5
 libQt5WebChannel.so.5
 libQt5WebSockets.so.5
 libQt5Widgets.so.5
@@ -29,5 +30,4 @@ libQt5Xml.so.5
 libQt5XmlPatterns.so.5
 libc.so.6
 libdbus-1.so.3
-libpthread.so.0
 libstdc++.so.6

@@ -1,8 +1,301 @@
+2020-09-11  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS:
+	Released as v5.15.1.
+	[f99d8e2299f1] [5.15.1] <5.15-maint>
+
+	* NEWS:
+	Updated the NEWS file.
+	[51b9d0e4a153] <5.15-maint>
+
+	* PyQt5.msp:
+	Fixed bugs related to QSGNode.
+	[a8a92e00511e] <5.15-maint>
+
+2020-08-27  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* PyQt5.msp, config-tests/cfgtest_QtCore.cpp:
+	Fixed building with compilers without constexpr support (ie. MSVC
+	2015).
+	[ae7bb0399061] <5.15-maint>
+
+2020-08-22  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* lib/project.py:
+	Set the name of the sip module explicitly.
+	[16811c7f937c] <5.15-maint>
+
+2020-08-08  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* qpy/QtCore/qpycore_pyqtboundsignal.cpp:
+	Fix a signal disconnect() when None is passed as the argument.
+	[22794b6d6a6c] <5.15-maint>
+
+2020-07-11  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, qpy/QtCore/qpycore_pyqtboundsignal.cpp:
+	Bound signals can now be tested for equality.
+	[2651d9efa223] <5.15-maint>
+
+	* NEWS, qpy/QtCore/qpycore_classinfo.cpp,
+	qpy/QtCore/qpycore_enums_flags.cpp:
+	Raise an appropriate exception if Q_CLASSINFO, Q_ENUM, Q_ENUMS,
+	Q_FLAG or Q_FLAGS are used on PyPy.
+	[1d22af022477] <5.15-maint>
+
+2020-06-16  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, PyQt5.msp, lib/configure.py, lib/project.py:
+	Added the QtTextToSpeech module.
+	[d31c28251af2] <5.15-maint>
+
+2020-06-10  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, PyQt5.msp, qpy/QtCore/qpycore_qjsonvalue.cpp:
+	None is now interpreted as a null QJsonValue.
+	[1b4fdf6609d4] <5.15-maint>
+
+2020-06-01  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* lib/project.py:
+	Fixed the platform tag for macOS wheels.
+	[72fd5bbd2388] <5.15-maint>
+
+2020-05-30  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* .hgtags:
+	Added tag 5.15.0 for changeset 5e7e90d17d36
+	[720e8a99e5df]
+
+	* NEWS:
+	Released as v5.15.0.
+	[5e7e90d17d36] [5.15.0]
+
+	* PyQt5.msp:
+	Added a missing private copy ctor.
+	[16609177df03]
+
+2020-05-29  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS:
+	Updated the NEWS file.
+	[ca51bd410062]
+
+	* PyQt5.msp, lib/configure.py, lib/project.py:
+	Added the QtQuick3D module.
+	[089b9c6b4c44]
+
+2020-05-28  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* PyQt5.msp:
+	Updated QtWebSockets, QtWidgets and QtXml for Qt v5.15.0.
+	[fe6404101c22]
+
+	* PyQt5.msp:
+	Updated QtQuick, QtRemoteObjects and QtSvg for Qt v5.15.0.
+	[fecc60c0fbb4]
+
+2020-05-27  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* PyQt5.msp, lib/SubclassCode/QtQml.versions,
+	qpy/QtCore/qpycore_qvector.sip:
+	Updated QtMultimedia, QtMultimediaWidgets, QtNetwork and QtQml for
+	Qt v5.15.0.
+	[404a2ac8e061]
+
+	* PyQt5.msp, lib/SubclassCode/QtHelp.versions:
+	Updated QtGui and QtHelp for Qt v5.15.0.
+	[2b69e249eb5e]
+
+	* PyQt5.msp:
+	Updated QtCore for Qt v5.15.0.
+	[0f9c5a2e60af]
+
+2020-05-18  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* QtAndroidExtras/qandroidjniobject.sip:
+	Fixes for the new callStaticMethod() overload.
+	[aab21130b519]
+
+	* NEWS, QtAndroidExtras/qandroidjniobject.sip:
+	Implemented the QAndroidJniObject.callStaticMethod() overload that
+	takes and returns a QJsonDocument.
+	[58a54fbe938b]
+
+2020-05-16  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* PyQt5.msp:
+	Initial pass of Qt v5.15.0.
+	[5457742900e7]
+
+	* Merged the 5.14-maint branch.
+	[304e165b67aa]
+
+2020-05-09  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* lib/pyproject.toml:
+	SIP v5.3 is now a minimum requirement.
+	[c88d94dfb85b] <5.14-maint>
+
+	* lib/pyproject.toml:
+	SIP v6 can be used as we don't use anything that will be removed.
+	[55ba9e69364a] <5.14-maint>
+
+	* lib/project.py:
+	Fix the ABI version of the sip module in anticipation of newer,
+	incompatible, versions.
+	[425fdef06f34] <5.14-maint>
+
+2020-05-07  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* lib/__init__.py:
+	Added support for PyQt5 sub-packages (possibly the PyQt5.sip module)
+	that are built with setuptools rather than a modern pip.
+	[ddea00aec29a] <5.14-maint>
+
+	* PyQt5.msp:
+	Fixed memory leaks in the __getitem__ method of QPolygon, QPolygonF
+	and QXmlStreamAttributes.
+	[90e14744b854] <5.14-maint>
+
+2020-05-05  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* PyQt5.msp:
+	Fixed QSGTexture.Filter.None.
+	[cfc9d0148a10] <5.14-maint>
+
+	* pyuic/uic/__init__.py:
+	Strengthened the warning at the top of .py files created by pyuic.
+	[00e1e859c348] <5.14-maint>
+
+2020-04-26  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* PyQt5.msp:
+	Automatically convert QGradient to a sub-class if possible.
+	[dd812681dcc8] <5.14-maint>
+
+2020-04-22  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* lib/pyproject.toml, rb-product:
+	Require a version of SIP with the race condition fix.
+	[2007cb6e7314] <5.14-maint>
+
+	* qpy/QtCore/qpycore_qobject_helpers.cpp:
+	Properly fixed the race condition. SIP v5.2.1 or later is also
+	required.
+	[9e9a0e6241e6] <5.14-maint>
+
+	* pyuic/uic/Compiler/qtproxies.py:
+	Added support for QUndoView to pyuic5.
+	[8cf7aa5ec0a2] <5.14-maint>
+
+2020-04-21  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* PyQt5.msp:
+	Added the remaining QtMultimedia control classes.
+	[4089144a11e5] <5.14-maint>
+
+	* PyQt5.msp:
+	Added the remaining camera related control classes.
+	[b3848dbdaf58] <5.14-maint>
+
+	* PyQt5.msp, lib/SubclassCode/QtMultimedia.versions:
+	Implemented the first batch of QMultimedia control classes.
+	[294ec48d7628] <5.14-maint>
+
+	* PyQt5.msp:
+	Added QVideoWidgetControl to QtMultimediaWidgets.
+	[786636ae8eec] <5.14-maint>
+
+2020-04-20  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* PyQt5.msp:
+	Added QtMutimedia.QMediaStreamsControl to see if it is useful.
+	[c7ca36894f1a] <5.14-maint>
+
+2020-04-18  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* qpy/QtCore/qpycore_qobject_helpers.cpp:
+	Remove a potential race condition in qpycore_qobject_qt_metacall().
+	[897d3b6fd4c2] <5.14-maint>
+
+2020-04-08  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* lib/project.py:
+	Build debug versions of the Designer and QML plugins and the DBus
+	module if any of the bindings modules ar ebeing built as debug
+	versions.
+	[46144794a070] <5.14-maint>
+
+2020-04-02  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* .hgtags:
+	Added tag 5.14.2 for changeset f6efe33af484
+	[5feed10b3fc9] <5.14-maint>
+
+	* NEWS:
+	Released as v5.14.2.
+	[f6efe33af484] [5.14.2] <5.14-maint>
+
+	* NEWS:
+	Updated the NEWS file.
+	[73d621910b73] <5.14-maint>
+
+	* PyQt5.msp:
+	Added the missing QTextCodec.convertFromUnicode() so that QTextCodec
+	can now be instantiated from Python.
+	[71aabcec4eb4] <5.14-maint>
+
+2020-03-15  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* qpy/QtCore/qjsonarray.sip, qpy/QtCore/qpycore_qjsonvalue.cpp:
+	Fixed a regression introduced when QJsonValue became iterable.
+	[b03590b430ce] <5.14-maint>
+
+2020-02-08  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* lib/pyproject.toml:
+	Fixed METADATA for the commercial wheels.
+	[5da20453cf42] <5.14-maint>
+
+2020-02-05  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* PyQt5.msp:
+	Fixed glReadPixels() in the ES2 support.
+	[c104737f6f05] <5.14-maint>
+
+2020-02-04  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* PyQt5.msp:
+	Enabled the OpenGL ES bindings.
+	[d15fbceb7632] <5.14-maint>
+
+2020-01-19  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* PyQt5.msp:
+	Implement QFlags.__index__() to replicate the behaviour of Python's
+	enum.IntFlag type and avoid a deprecation warning in Python v3.8.
+	[541f2dcf2b27] <5.14-maint>
+
+	* .hgignore:
+	Ignore the new distribution directories.
+	[ca61cf227382] <5.14-maint>
+
+2020-01-05  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* .hgtags:
+	Added tag 5.14.1 for changeset 71a24375c1af
+	[9807854bd906] <5.14-maint>
+
+	* NEWS:
+	Released as v5.14.1.
+	[71a24375c1af] [5.14.1] <5.14-maint>
+
 2019-12-31  Phil Thompson  <phil@riverbankcomputing.com>
 
 	* NEWS:
 	Updated the NEWS file.
-	[07df2e7706a8] [tip] <5.14-maint>
+	[07df2e7706a8] <5.14-maint>
 
 2019-12-22  Phil Thompson  <phil@riverbankcomputing.com>
 
