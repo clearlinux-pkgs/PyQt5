@@ -1,4 +1,444 @@
+2023-01-31  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, lib/project.py:
+	Fix the order in which modules are built so that the composite Qt
+	module is built after everything it depends on.
+	[c8aba8cdb7c0] [5.15.9] <5.15-maint>
+
+2023-01-22  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* .hgtags:
+	Added tag 5.15.8 for changeset f3d5a635ec21
+	[255d4467683f] <5.15-maint>
+
+	* lib/pyproject.toml, rb-product.toml:
+	Ensure the PyQt-Qt5 dependency is correct.
+	[f3d5a635ec21] [5.15.8] <5.15-maint>
+
+	* NEWS, PyQt5.msp:
+	Updated for new elements added in Qt v5.15 patch versions.
+	[95299cb2df3b] <5.15-maint>
+
+2022-12-13  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, PyQt5.msp:
+	Added the missing QBluetoothDeviceDiscoveryAgent.DiscoveryMethod
+	members.
+	[fdce9f658ad8] <5.15-maint>
+
+2022-10-30  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, lib/pyproject.toml:
+	SIP v6.6.2 is now a minimum requirement for the array support.
+	[bd2a905b5345] <5.15-maint>
+
+2022-10-28  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, pyuic/uic/__init__.py:
+	Fixed uic.compileUiDir() when the default system encoding is not
+	UTF8.
+	[50050fc4cd93] <5.15-maint>
+
+2022-10-10  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, PyQt5.msp:
+	Fixed QBoxLayout.insertItem() ownership bug.
+	[dd1a6abd2427] <5.15-maint>
+
+2022-09-17  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, qpy/QtCore/qpycore_qobject_helpers.cpp:
+	Fixed calling QObject::inherits() from C++ on instances that were
+	created by Python (and so was an instance of a generated derived
+	class), had it's ownership transfered to C++ and the Python object
+	garbage collected. This broke all sub-class converter code.
+	[2e3c3b71f118] <5.15-maint>
+
+2022-06-18  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* .hgtags:
+	Added tag 5.15.7 for changeset b6de090403e0
+	[910c4de63a6b] <5.15-maint>
+
+2022-06-06  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, PyQt5.msp:
+	Reordered QPainter methods so that QPolygon[F] are not handled as
+	sequences.
+	[b6de090403e0] [5.15.7] <5.15-maint>
+
+2022-05-21  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, PyQt5.msp:
+	Refactored the QPainter draw methods to exploit sip.array objects.
+	[c848cf6bafc3] <5.15-maint>
+
+2022-05-17  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, lib/project.py:
+	PyQt5-sip v12.11 is now required to enable support for sip.array.
+	[fe8d991d5445] <5.15-maint>
+
+2022-05-04  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, PyQt5.msp:
+	Import the enum module in QtCore.pyi.
+	[549feba9d56e] <5.15-maint>
+
+2022-02-28  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* lib/project.py:
+	Documented why there is a need to be explicit about the name of the
+	sip module.
+	[03ca1502b93d] <5.15-maint>
+
+	* NEWS, lib/project.py:
+	There is no need to be explicit about the name of the sip module.
+	[d5644b3af8ce] <5.15-maint>
+
+2022-02-27  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, lib/project.py:
+	Be explicit abou tthe sip module name and ABI version.
+	[d3ef6180143c] <5.15-maint>
+
+2022-02-26  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, qpy/QtQml/qpyqml_listdata.cpp:
+	Fixed a bug in the tidying up of QQmlListProperty.
+	[d55d3fcf6231] <5.15-maint>
+
+2022-02-01  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, PyQt5.msp:
+	Release the GIL when calling the QThreadPool dtor.
+	[4f9a01a72de9] <5.15-maint>
+
+2022-01-27  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, qpy/pylupdate/metatranslator.cpp:
+	Fixed the corruption of HTML in translated messages by pylupdate.
+	[705c61b3620c] <5.15-maint>
+
+2021-12-11  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* qpy/QtNetwork/qpynetwork_qmap.sip:
+	Added support for the IpAddressEntry member of
+	QSsl.AlternativeNameEntryType.
+	[90f02fa83cc0] <5.15-maint>
+
+	* NEWS:
+	Fixed the NEWS file.
+	[7785974512b8] <5.15-maint>
+
+	* NEWS, qpy/QtNetwork/qpynetwork_qmap.sip:
+	Fixed the handling of the result of
+	QSslCertificate.subjectAlternativeNames().
+	[97d172d0fc09] <5.15-maint>
+
+2021-11-23  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, PyQt5.msp:
+	Various fixes to the QUrl.FormattingOptions enum. Removed a
+	redundant ctor from QFlags in .pyi files.
+	[61c0b5b29769] <5.15-maint>
+
+2021-11-18  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, PyQt5.msp:
+	Added the missing QBluetoothUuid ctors.
+	[d7fb0f074c82] <5.15-maint>
+
+2021-11-12  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, PyQt5.msp:
+	Backed out changeset 24d217336964 The annotations aren't
+	superfluous.
+	[5c0045266501] <5.15-maint>
+
+	* NEWS, PyQt5.msp:
+	Removed some superfluous /PyInt/ annotations.
+	[24d217336964] <5.15-maint>
+
+2021-10-29  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* .hgtags:
+	Added tag 5.15.6 for changeset 34cb760572b8
+	[aa9939ca4c8b] <5.15-maint>
+
+2021-10-24  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* pyuic/uic/Compiler/qtproxies.py:
+	Generate typing information to ignore connect() in pyuic generated
+	code.
+	[34cb760572b8] [5.15.6] <5.15-maint>
+
+	* PyQt5.msp:
+	Remove QObject.__getattr__() from QtCore.pyi as it hides
+	missing/mistyped attribute names.
+	[ba5c19ab8690] <5.15-maint>
+
+	* NEWS, PyQt5.msp, lib/pyproject.toml:
+	Fixed pickling of QByteArray with Python v3.10.
+	[2ed6a8e59201] <5.15-maint>
+
+	* test/tests/classes/test_QByteArray.py:
+	Added the QByteArray pickle test.
+	[6e7bdf2d8c92] <5.15-maint>
+
+2021-10-12  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* .hgtags:
+	Added tag 5.15.5 for changeset ab35506238c2
+	[965570c2c344] <5.15-maint>
+
+2021-10-07  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, pyuic/uic/Compiler/qtproxies.py:
+	Fixed pyuic's handling of QFontDatabase.
+	[ab35506238c2] [5.15.5] <5.15-maint>
+
+2021-09-25  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, qpy/QtCore/qpycore_pyqtmethodproxy.cpp:
+	Fixed the invocation of meta-type methods so that the result is
+	available.
+	[24ff630d737f] <5.15-maint>
+
+2021-08-10  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* lib/README:
+	Fixed the README.
+	[a44fc2eef805] <5.15-maint>
+
+2021-07-09  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, PyQt5.msp:
+	Fixed the ordering of the QCompleter ctors so that a
+	QAbstractItemModel argument doesn't get interpreted as a parent
+	QObject argument.
+	[288f50b3e9c8] <5.15-maint>
+
+2021-05-21  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, qpy/QtCore/qpycore_qmap.sip:
+	Fixed the QMultiMap mapped type.
+	[0c05544ec6ad] <5.15-maint>
+
+2021-05-20  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* qpy/QtCore/qpycore_decorators.cpp:
+	Improved an error message.
+	[76943e2449c4] <5.15-maint>
+
+2021-04-15  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, PyQt5.msp:
+	Added the missing QPdfWriter.setPageSize() overload.
+	[f8aaea7a6ade] <5.15-maint>
+
+2021-04-14  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, qpy/pylupdate/fetchtr.cpp, qpy/pylupdate/metatranslator.cpp:
+	pylupdate5 now assumes the UTF-8 codec and specifies v2.1 as the .ts
+	file format.
+	[9314488ea608] <5.15-maint>
+
+2021-03-05  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* .hgtags:
+	Added tag 5.15.4 for changeset b30547186181
+	[e53432659118] <5.15-maint>
+
+	* NEWS:
+	Released as v5.15.4.
+	[b30547186181] [5.15.4] <5.15-maint>
+
+	* qpy/QtCore/qpycore_qt_conf.cpp:
+	Fixed the embedded conf file.
+	[28d8448d1ec4] <5.15-maint>
+
+2021-03-04  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* lib/configure.py, lib/project.py:
+	Fixed the Qt subdirectory in __init__.py.
+	[1cd001d504ab] <5.15-maint>
+
+2021-03-02  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS:
+	Updated the NEWS file.
+	[755c706e32ba] <5.15-maint>
+
+2021-02-27  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* lib/pyproject.toml:
+	Fixed the project dependencies.
+	[f945ce38080e] <5.15-maint>
+
+	* rb-product, rb-product.toml:
+	Updated the product file.
+	[fc2239114623] <5.15-maint>
+
+2021-02-22  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* .hgtags:
+	Added tag 5.15.3 for changeset 301db948366e
+	[a7dde6d9b36d] <5.15-maint>
+
+	* NEWS:
+	Released as v5.15.3.
+	[301db948366e] [5.15.3] <5.15-maint>
+
+	* NEWS:
+	Updated the NEWS file.
+	[266673bae2b4] <5.15-maint>
+
+2021-02-15  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* PyQt5.msp:
+	Fixed a number of potential deadlocks in QSettings and
+	QLibraryInfo.location().
+	[7384c3dd7be6] <5.15-maint>
+
+2021-02-09  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* lib/pyproject.toml:
+	Added the dependency on the Qt wheel.
+	[0ae0210a3702] <5.15-maint>
+
+	* PyQt5.msp, lib/configure.py, lib/project.py:
+	Removed QtNetworkAuth.
+	[8242660fe0f2] <5.15-maint>
+
+2021-01-28  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* pylupdate/pylupdate_main.py, pylupdate/pylupdatemod.sip:
+	Fixed pylupdate's handling of filenames with non-Latin1 characters.
+	[cd771b985dd5] <5.15-maint>
+
+2021-01-03  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* PyQt5.msp:
+	Fixed a type hint typo.
+	[8269fa810791] <5.15-maint>
+
+	* PyQt5.msp:
+	Some type hint fixes.
+	[b956e87c177f] <5.15-maint>
+
+2020-12-24  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* PyQt5.msp, QAxContainer/qaxbase.sip:
+	Removed some forgotten uses of SIP_SSIZE_T.
+	[728d87aa1c8e] <5.15-maint>
+
+2020-12-14  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* qpy/QtCore/qpycore_api.h, qpy/QtCore/qpycore_init.cpp,
+	qpy/QtCore/qpycore_public_api.cpp:
+	Don't call the QCoreApplication dtor if we didn't call the ctor.
+	[e4dc97f92847] <5.15-maint>
+
+2020-12-07  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* PyQt5.msp:
+	Added the missing QImage.setAlphaChannel().
+	[b642690ef798] <5.15-maint>
+
+2020-11-23  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* .hgtags:
+	Added tag 5.15.2 for changeset ddf234c8c683
+	[2f116d2cb5da] <5.15-maint>
+
+	* NEWS:
+	Released as v5.12.2.
+	[ddf234c8c683] [5.15.2] <5.15-maint>
+
+	* NEWS:
+	Updated the NEWS file.
+	[a4088498ec1a] <5.15-maint>
+
+2020-11-13  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* qpy/QtCore/qpycore_pyqtsignal.cpp, qpy/QtCore/qpycore_pyqtslot.cpp:
+	Eliminated a couple of Python deprecation warnings.
+	[a868cf5559cb] <5.15-maint>
+
+2020-10-30  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* PyQt5.msp:
+	Fixed some typos in the OpenGL bindings.
+	[d824696aef6b] <5.15-maint>
+
+2020-10-28  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* PyQt5.msp:
+	Updated to project v15.
+	[6cc6247a25e1] <5.15-maint>
+
+2020-10-04  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* designer/pluginloader.cpp, qmlscene/pluginloader.cpp:
+	Eliminate deprecation warnings from Python v3.9.
+	[ba17824001af] <5.15-maint>
+
+	* PyQt5.msp:
+	Ensure that QtQuick will build without OpenGL.
+	[9625e73814d4] <5.15-maint>
+
+2020-09-28  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* PyQt5.msp:
+	Added a missing /TransferBack/ annotation to QLayout.removeWidget().
+	[230f954c1920] <5.15-maint>
+
+2020-09-27  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* qpy/QtCore/qpycore_pyqtboundsignal.cpp:
+	Fixed hashable signals for unsupported versions of Python.
+	[32f6a9018722] <5.15-maint>
+
+2020-09-24  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* PyQt5.msp:
+	Fixed QActionGroup.ExclusionPolicy.None and
+	QOcspRevocationReason.None.
+	[cdcf3488537b] <5.15-maint>
+
+2020-09-18  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* lib/project.py:
+	Check the version of Qt is supported.
+	[50527038fe31] <5.15-maint>
+
+2020-09-17  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* lib/project.py, lib/pyproject.toml:
+	Require PyQt-builder v1.6 as we no longer specify the sip module and
+	ABI.
+	[0f86b0b9bb21] <5.15-maint>
+
+	* PyQt5.msp:
+	Added the QT_MAC_WANTS_LAYER workaround for lost paint events.
+	[183a91751895] <5.15-maint>
+
+	* PyQt5.msp, lib/SubclassCode/QtMultimedia.versions:
+	Fixed building against Qt v5.10 and earlier.
+	[29e2ebf17db3] <5.15-maint>
+
+2020-09-14  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, qpy/QtCore/qpycore_pyqtboundsignal.cpp:
+	Bound signals are now hashable.
+	[4318b62d0575] <5.15-maint>
+
 2020-09-11  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* .hgtags:
+	Added tag 5.15.1 for changeset f99d8e2299f1
+	[2e783d474267] <5.15-maint>
 
 	* NEWS:
 	Released as v5.15.1.

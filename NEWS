@@ -1,3 +1,48 @@
+v5.15.9 31st January 2023
+  - Bug fixes.
+
+v5.15.8 22nd January 2023
+  - Added the missing QLocale.Language.NigerianPidgin member (Qt v5.15.2 and
+    later).
+  - Added the missing QOperatingSystemVersion.MacOSBigSure attribute
+    (Qt v5.15.1 and later).
+  - Added the missing QThreadPool.contains() method (Qt v5.15.1 and later).
+  - Added the missing QBluetoothDeviceDiscoveryAgent.DiscoveryMethod members.
+  - Bug fixes.
+
+v5.15.7 6th June 2022
+  - Refactored the draw methods of QPainter to accept sip.array objects of
+    appropriate types.  Such arrays, once initialised, can be used very
+    efficiently as they do not require repeated conversion from the usual
+    Python collection types.
+  - Added the missing QBluetoothUuid constructors.
+  - PyQt5-sip v12.11 is now required to enable support for sip.array.
+  - Bug fixes.
+
+v5.15.6 24th October 2021
+  - Bug fixes.
+
+v5.15.5 7th October 2021
+  - Added the missing QPdfWriter.setPageSize() overload.
+  - pylupdate5 now assumes that the default codec is UTF-8 and specified v2.1
+    as the .ts file format.
+  - Bug fixes.
+
+v5.15.4 5th March 2021
+  - Packaging bug fixes.
+
+v5.15.3 23rd February 2021
+  - Added the missing QImage.setAlphaChannel().
+  - Support for the QtNetworkAuth library has been moved to a separate
+    PyQtNetworkAuth package.
+  - Wheels now assume that the corresponding Qt libraries are in an external
+    wheel rather than being bundled.
+  - Bug fixes.
+
+v5.15.2 23rd November 2020
+  - Bound signals are now hashable.
+  - The QT_MAC_WANTS_LAYER environment variable is automatically set on macOS.
+
 v5.15.1 12th September 2020
   - Added the QtTextToSpeech module.
   - None is now interpreted as a null QJsonValue.
