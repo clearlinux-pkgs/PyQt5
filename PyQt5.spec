@@ -5,7 +5,7 @@
 #
 Name     : PyQt5
 Version  : 5.15.9
-Release  : 44
+Release  : 45
 URL      : https://files.pythonhosted.org/packages/5c/46/b4b6eae1e24d9432905ef1d4e7c28b6610e28252527cdc38f2a75997d8b5/PyQt5-5.15.9.tar.gz
 Source0  : https://files.pythonhosted.org/packages/5c/46/b4b6eae1e24d9432905ef1d4e7c28b6610e28252527cdc38f2a75997d8b5/PyQt5-5.15.9.tar.gz
 Summary  : Python bindings for the Qt cross platform application toolkit
@@ -15,6 +15,7 @@ Requires: PyQt5-bin = %{version}-%{release}
 Requires: PyQt5-license = %{version}-%{release}
 Requires: PyQt5-python = %{version}-%{release}
 Requires: PyQt5-python3 = %{version}-%{release}
+Requires: pypi-pyqt5_sip
 BuildRequires : buildreq-kde
 BuildRequires : dbus-python
 BuildRequires : dbus-python-dev
@@ -109,7 +110,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683562736
+export SOURCE_DATE_EPOCH=1683664349
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
@@ -122,7 +123,7 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1683562736
+export SOURCE_DATE_EPOCH=1683664349
 rm -rf %{buildroot}
 ## install_prepend content
 cd build
