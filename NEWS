@@ -1,3 +1,10 @@
+v5.15.10 10th October 2023
+  - Added the missing QEvent.Type.NativeGesture member (Qt v5.2 and later).
+  - Added the missing QEvent.Type.EnterEditFocus and QEvent.Type.LeaveEditFocus
+    members.
+  - PyQt5-sip v12.13 is now required for Python v3.12 support.
+  - Bug fixes.
+
 v5.15.9 31st January 2023
   - Bug fixes.
 
