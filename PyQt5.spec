@@ -7,7 +7,7 @@
 #
 Name     : PyQt5
 Version  : 5.15.10
-Release  : 48
+Release  : 49
 URL      : https://files.pythonhosted.org/packages/4d/5d/b8b6e26956ec113ad3f566e02abd12ac3a56b103fcc7e0735e27ee4a1df3/PyQt5-5.15.10.tar.gz
 Source0  : https://files.pythonhosted.org/packages/4d/5d/b8b6e26956ec113ad3f566e02abd12ac3a56b103fcc7e0735e27ee4a1df3/PyQt5-5.15.10.tar.gz
 Summary  : Python bindings for the Qt cross platform application toolkit
