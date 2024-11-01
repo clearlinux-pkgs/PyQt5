@@ -1,4 +1,49 @@
+2024-07-01  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, lib/project.py, lib/pyproject.toml:
+	SIP v6.8.6 and PyQt5-sip v12.15 are now required for Python v3.13
+	support and for Linux on ARM.
+	[d5114ac4018e] [5.15.11] <5.15-maint>
+
+2024-02-20  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* lib/pyproject.toml:
+	Fixed a typo in pyproject.toml.
+	[0a2019258b48] <5.15-maint>
+
+2024-02-18  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* METADATA.in:
+	Removed METADATA.in
+	[0a9cc30c616e] <5.15-maint>
+
+	* NEWS, lib/README, lib/README.md, lib/pyproject.toml:
+	Migrated from [tool.sip.metadata] to [project] in pyproject.toml.
+	[12ca74b530c2] <5.15-maint>
+
+2024-01-02  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, rb-product.toml:
+	Removed the product file.
+	[185b51346925] <5.15-maint>
+
+2024-01-01  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, lib/configure.py:
+	Removed configure.py.
+	[2c132857ebc8] <5.15-maint>
+
+2023-11-18  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS, PyQt5.msp:
+	Fix QWidgetAction ownership annotations.
+	[f28ad14a55aa] <5.15-maint>
+
 2023-10-10  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* .hgtags:
+	Added tag 5.15.10 for changeset a92a518d62a1
+	[b8aeb4e786e2] <5.15-maint>
 
 	* NEWS, qpy/QtCore/qpycore_types.cpp:
 	Removed a compiler warning message.
@@ -4142,11 +4187,11 @@
 	[659af5655c90]
 
 	* build.py, installers/AddToPath.nsh, installers/BuildGPL.txt,
-	installers/PyQt5-Qt5-gpl.nsi, installers/StrSlash.nsh, installers
-	/mysql-config.bat, installers/psql-config.bat,
-	installers/pyqt5-check.py, installers/pyqt5-config.bat, installers
-	/qsci-pyqt5-config.bat, installers/qt5-config.bat, installers/sip-
-	pyqt5-config.bat:
+	installers/PyQt5-Qt5-gpl.nsi, installers/StrSlash.nsh,
+	installers/mysql-config.bat, installers/psql-config.bat,
+	installers/pyqt5-check.py, installers/pyqt5-config.bat,
+	installers/qsci-pyqt5-config.bat, installers/qt5-config.bat,
+	installers/sip-pyqt5-config.bat:
 	Removed the old .nsi installers.
 	[22449f1b0af2]
 
@@ -5391,8 +5436,8 @@
 
 2015-09-08  Phil Thompson  <phil@riverbankcomputing.com>
 
-	* installers/BuildGPL.txt, installers/PyQt5-Qt5-gpl.nsi, installers
-	/psql-config.bat:
+	* installers/BuildGPL.txt, installers/PyQt5-Qt5-gpl.nsi,
+	installers/psql-config.bat:
 	Updates to installers for Python v3.5.
 	[df9e3329a638] <5.5-maint>
 
@@ -8057,8 +8102,8 @@
 	emitted.
 	[ebd36baa56e9] <5.1-maint>
 
-	* Makefile, designer/python.pro-in, lib/configure.py, qmlscene/python
-	.pro-in:
+	* Makefile, designer/python.pro-in, lib/configure.py,
+	qmlscene/python.pro-in:
 	PyQt will now build against a debug only version of Qt.
 	[d65e39e3cd7d] <5.1-maint>
 
@@ -10125,8 +10170,9 @@
 	examples/declarative/toys/tvtennis/tvtennis.qml,
 	examples/declarative/ui-components/README, examples/declarative/ui-
 	components/dialcontrol/content/Dial.qml, examples/declarative/ui-
-	components/dialcontrol/content/QuitButton.qml, examples/declarative
-	/ui-components/dialcontrol/content/background.png,
+	components/dialcontrol/content/QuitButton.qml,
+	examples/declarative/ui-
+	components/dialcontrol/content/background.png,
 	examples/declarative/ui-components/dialcontrol/content/needle.png,
 	examples/declarative/ui-
 	components/dialcontrol/content/needle_shadow.png,
@@ -10139,8 +10185,9 @@
 	examples/declarative/ui-components/flipable/content/back.png,
 	examples/declarative/ui-components/flipable/flipable.qml,
 	examples/declarative/ui-
-	components/progressbar/content/ProgressBar.qml, examples/declarative
-	/ui-components/progressbar/content/background.png,
+	components/progressbar/content/ProgressBar.qml,
+	examples/declarative/ui-
+	components/progressbar/content/background.png,
 	examples/declarative/ui-components/progressbar/main.qml,
 	examples/declarative/ui-components/scrollbar/ScrollBar.qml,
 	examples/declarative/ui-components/scrollbar/main.qml,
@@ -10148,23 +10195,24 @@
 	examples/declarative/ui-components/searchbox/SearchBox.qml,
 	examples/declarative/ui-components/searchbox/images/clear.png,
 	examples/declarative/ui-components/searchbox/images/lineedit-bg-
-	focus.png, examples/declarative/ui-components/searchbox/images
-	/lineedit-bg.png, examples/declarative/ui-
-	components/searchbox/main.qml, examples/declarative/ui-
-	components/slideswitch/content/Switch.qml, examples/declarative/ui-
-	components/slideswitch/content/background.svg, examples/declarative
-	/ui-components/slideswitch/content/knob.svg, examples/declarative
-	/ui-components/slideswitch/slideswitch.qml, examples/declarative/ui-
-	components/spinner/content/Spinner.qml, examples/declarative/ui-
-	components/spinner/content/spinner-bg.png, examples/declarative/ui-
-	components/spinner/content/spinner-select.png, examples/declarative
-	/ui-components/spinner/main.qml, examples/declarative/ui-
-	components/tabwidget/TabWidget.qml, examples/declarative/ui-
-	components/tabwidget/main.qml, examples/declarative/ui-
-	components/tabwidget/tab.png, examples/qtdemo/menumanager.py,
-	examples/qtdemo/qmlShell.qml, examples/qtdemo/qtdemo.qrc,
-	examples/qtdemo/qtdemo_rc.py, lib/configure.py,
-	qpy/QtDeclarative/qpydeclarative.pro,
+	focus.png, examples/declarative/ui-
+	components/searchbox/images/lineedit-bg.png,
+	examples/declarative/ui-components/searchbox/main.qml,
+	examples/declarative/ui-components/slideswitch/content/Switch.qml,
+	examples/declarative/ui-
+	components/slideswitch/content/background.svg,
+	examples/declarative/ui-components/slideswitch/content/knob.svg,
+	examples/declarative/ui-components/slideswitch/slideswitch.qml,
+	examples/declarative/ui-components/spinner/content/Spinner.qml,
+	examples/declarative/ui-components/spinner/content/spinner-bg.png,
+	examples/declarative/ui-components/spinner/content/spinner-
+	select.png, examples/declarative/ui-components/spinner/main.qml,
+	examples/declarative/ui-components/tabwidget/TabWidget.qml,
+	examples/declarative/ui-components/tabwidget/main.qml,
+	examples/declarative/ui-components/tabwidget/tab.png,
+	examples/qtdemo/menumanager.py, examples/qtdemo/qmlShell.qml,
+	examples/qtdemo/qtdemo.qrc, examples/qtdemo/qtdemo_rc.py,
+	lib/configure.py, qpy/QtDeclarative/qpydeclarative.pro,
 	qpy/QtDeclarative/qpydeclarative_api.h,
 	qpy/QtDeclarative/qpydeclarative_chimera_helpers.cpp,
 	qpy/QtDeclarative/qpydeclarative_chimera_helpers.h,
@@ -10350,8 +10398,9 @@
 	examples/qtdemo/guide.py, examples/qtdemo/guidecircle.py,
 	examples/qtdemo/guideline.py, examples/qtdemo/headingitem.py,
 	examples/qtdemo/imageitem.py, examples/qtdemo/images/demobg.png,
-	examples/qtdemo/images/qtlogo_small.png, examples/qtdemo/images
-	/trolltech-logo.png, examples/qtdemo/itemcircleanimation.py,
+	examples/qtdemo/images/qtlogo_small.png,
+	examples/qtdemo/images/trolltech-logo.png,
+	examples/qtdemo/itemcircleanimation.py,
 	examples/qtdemo/letteritem.py, examples/qtdemo/mainwindow.py,
 	examples/qtdemo/menucontent.py, examples/qtdemo/menumanager.py,
 	examples/qtdemo/qmlShell.qml, examples/qtdemo/qtdemo.py,
@@ -10529,8 +10578,9 @@
 	examples/demos/declarative/minehunt/MinehuntCore/pics/face-sad.png,
 	examples/demos/declarative/minehunt/MinehuntCore/pics/face-smile-
 	big.png, examples/demos/declarative/minehunt/MinehuntCore/pics/face-
-	smile.png, examples/demos/declarative/minehunt/MinehuntCore/pics
-	/flag-color.png,
+	smile.png,
+	examples/demos/declarative/minehunt/MinehuntCore/pics/flag-
+	color.png,
 	examples/demos/declarative/minehunt/MinehuntCore/pics/flag.png,
 	examples/demos/declarative/minehunt/MinehuntCore/pics/front.png,
 	examples/demos/declarative/minehunt/MinehuntCore/pics/quit.png,
@@ -10884,8 +10934,8 @@
 	Updated the dragdroprobot.py example.
 	[8870ed27b984]
 
-	* installers/BuildGPL.txt, installers/qsci-config.bat, installers
-	/qsci-pyqt5-config.bat:
+	* installers/BuildGPL.txt, installers/qsci-config.bat,
+	installers/qsci-pyqt5-config.bat:
 	More installer updates.
 	[2eaf68f6a2e8]
 
@@ -11016,8 +11066,8 @@
 	Updated the screenshot.py example.
 	[f0d706faeaf8]
 
-	* designer/pluginloader.cpp, designer/pluginloader.h, designer/python
-	.pro-in, installers/PyQt5-Qt5-gpl.nsi:
+	* designer/pluginloader.cpp, designer/pluginloader.h,
+	designer/python.pro-in, installers/PyQt5-Qt5-gpl.nsi:
 	Updated the Qt Designer Python plugin for PyQt5.
 	[13fc7007e2e1]
 
@@ -11418,13 +11468,15 @@
 	examples/animation/easing/easing.qrc,
 	examples/animation/easing/easing_rc2.py,
 	examples/animation/easing/easing_rc3.py,
-	examples/animation/easing/form.ui, examples/animation/easing/images
-	/qt-logo.png, examples/animation/easing/ui_form.py,
-	examples/animation/moveblocks.py, examples/animation/states
-	/accessories-dictionary.png,
+	examples/animation/easing/form.ui,
+	examples/animation/easing/images/qt-logo.png,
+	examples/animation/easing/ui_form.py,
+	examples/animation/moveblocks.py,
+	examples/animation/states/accessories-dictionary.png,
 	examples/animation/states/akregator.png,
-	examples/animation/states/digikam.png, examples/animation/states
-	/help-browser.png, examples/animation/states/k3b.png,
+	examples/animation/states/digikam.png,
+	examples/animation/states/help-browser.png,
+	examples/animation/states/k3b.png,
 	examples/animation/states/kchart.png,
 	examples/animation/states/states.py,
 	examples/animation/states/states.qrc,
@@ -11494,8 +11546,9 @@
 	examples/declarative/toys/tvtennis/tvtennis.qml,
 	examples/declarative/ui-components/README, examples/declarative/ui-
 	components/dialcontrol/content/Dial.qml, examples/declarative/ui-
-	components/dialcontrol/content/QuitButton.qml, examples/declarative
-	/ui-components/dialcontrol/content/background.png,
+	components/dialcontrol/content/QuitButton.qml,
+	examples/declarative/ui-
+	components/dialcontrol/content/background.png,
 	examples/declarative/ui-components/dialcontrol/content/needle.png,
 	examples/declarative/ui-
 	components/dialcontrol/content/needle_shadow.png,
@@ -11508,8 +11561,9 @@
 	examples/declarative/ui-components/flipable/content/back.png,
 	examples/declarative/ui-components/flipable/flipable.qml,
 	examples/declarative/ui-
-	components/progressbar/content/ProgressBar.qml, examples/declarative
-	/ui-components/progressbar/content/background.png,
+	components/progressbar/content/ProgressBar.qml,
+	examples/declarative/ui-
+	components/progressbar/content/background.png,
 	examples/declarative/ui-components/progressbar/main.qml,
 	examples/declarative/ui-components/scrollbar/ScrollBar.qml,
 	examples/declarative/ui-components/scrollbar/main.qml,
@@ -11517,20 +11571,22 @@
 	examples/declarative/ui-components/searchbox/SearchBox.qml,
 	examples/declarative/ui-components/searchbox/images/clear.png,
 	examples/declarative/ui-components/searchbox/images/lineedit-bg-
-	focus.png, examples/declarative/ui-components/searchbox/images
-	/lineedit-bg.png, examples/declarative/ui-
-	components/searchbox/main.qml, examples/declarative/ui-
-	components/slideswitch/content/Switch.qml, examples/declarative/ui-
-	components/slideswitch/content/background.svg, examples/declarative
-	/ui-components/slideswitch/content/knob.svg, examples/declarative
-	/ui-components/slideswitch/slideswitch.qml, examples/declarative/ui-
-	components/spinner/content/Spinner.qml, examples/declarative/ui-
-	components/spinner/content/spinner-bg.png, examples/declarative/ui-
-	components/spinner/content/spinner-select.png, examples/declarative
-	/ui-components/spinner/main.qml, examples/declarative/ui-
-	components/tabwidget/TabWidget.qml, examples/declarative/ui-
-	components/tabwidget/main.qml, examples/declarative/ui-
-	components/tabwidget/tab.png, examples/demos/README,
+	focus.png, examples/declarative/ui-
+	components/searchbox/images/lineedit-bg.png,
+	examples/declarative/ui-components/searchbox/main.qml,
+	examples/declarative/ui-components/slideswitch/content/Switch.qml,
+	examples/declarative/ui-
+	components/slideswitch/content/background.svg,
+	examples/declarative/ui-components/slideswitch/content/knob.svg,
+	examples/declarative/ui-components/slideswitch/slideswitch.qml,
+	examples/declarative/ui-components/spinner/content/Spinner.qml,
+	examples/declarative/ui-components/spinner/content/spinner-bg.png,
+	examples/declarative/ui-components/spinner/content/spinner-
+	select.png, examples/declarative/ui-components/spinner/main.qml,
+	examples/declarative/ui-components/tabwidget/TabWidget.qml,
+	examples/declarative/ui-components/tabwidget/main.qml,
+	examples/declarative/ui-components/tabwidget/tab.png,
+	examples/demos/README,
 	examples/demos/declarative/minehunt/MinehuntCore/Explosion.qml,
 	examples/demos/declarative/minehunt/MinehuntCore/Tile.qml,
 	examples/demos/declarative/minehunt/MinehuntCore/pics/No-Ones-
@@ -11542,8 +11598,9 @@
 	examples/demos/declarative/minehunt/MinehuntCore/pics/face-sad.png,
 	examples/demos/declarative/minehunt/MinehuntCore/pics/face-smile-
 	big.png, examples/demos/declarative/minehunt/MinehuntCore/pics/face-
-	smile.png, examples/demos/declarative/minehunt/MinehuntCore/pics
-	/flag-color.png,
+	smile.png,
+	examples/demos/declarative/minehunt/MinehuntCore/pics/flag-
+	color.png,
 	examples/demos/declarative/minehunt/MinehuntCore/pics/flag.png,
 	examples/demos/declarative/minehunt/MinehuntCore/pics/front.png,
 	examples/demos/declarative/minehunt/MinehuntCore/pics/quit.png,
@@ -11570,8 +11627,8 @@
 	examples/demos/declarative/samegame/highscores/score_style.xsl,
 	examples/demos/declarative/samegame/highscores/scores.php,
 	examples/demos/declarative/samegame/samegame.qml,
-	examples/demos/embedded/lightmaps.py, examples/demos/embeddeddialogs
-	/No-Ones-Laughing-3.jpg,
+	examples/demos/embedded/lightmaps.py,
+	examples/demos/embeddeddialogs/No-Ones-Laughing-3.jpg,
 	examples/demos/embeddeddialogs/embeddeddialog.py,
 	examples/demos/embeddeddialogs/embeddeddialog.ui,
 	examples/demos/embeddeddialogs/embeddeddialogs.py,
@@ -12107,12 +12164,12 @@
 	examples/xmlpatterns/schema/schema_rc3.py,
 	examples/xmlpatterns/schema/ui_schema.py, installers/AddToPath.nsh,
 	installers/BuildGPL.txt, installers/PyQt5-Qt5-gpl.nsi,
-	installers/StrSlash.nsh, installers/mysql-config.bat, installers
-	/psql-config.bat, installers/pyqt-check.py, installers/pyqt-
-	config.bat, installers/qsci-config.bat, installers/qt5-config.bat,
-	installers/sip-config.bat, lib/LICENSE.commercial,
-	lib/LICENSE.commercial.short, lib/LICENSE.gpl,
-	lib/LICENSE.gpl.short, lib/LICENSE.internal,
+	installers/StrSlash.nsh, installers/mysql-config.bat,
+	installers/psql-config.bat, installers/pyqt-check.py,
+	installers/pyqt-config.bat, installers/qsci-config.bat,
+	installers/qt5-config.bat, installers/sip-config.bat,
+	lib/LICENSE.commercial, lib/LICENSE.commercial.short,
+	lib/LICENSE.gpl, lib/LICENSE.gpl.short, lib/LICENSE.internal,
 	lib/QMetaObjectFormats.txt, lib/README,
 	lib/SubclassCode/QtGuiQt4.versions,
 	lib/SubclassCode/QtNetwork.versions, lib/SubclassCode/mksccode.py,

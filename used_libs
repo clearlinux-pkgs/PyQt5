@@ -15,13 +15,11 @@ libQt5PrintSupport.so.5
 libQt5Qml.so.5
 libQt5Quick.so.5
 libQt5QuickWidgets.so.5
-libQt5RemoteObjects.so.5
 libQt5Sensors.so.5
 libQt5SerialPort.so.5
 libQt5Sql.so.5
 libQt5Svg.so.5
 libQt5Test.so.5
-libQt5TextToSpeech.so.5
 libQt5WebChannel.so.5
 libQt5WebSockets.so.5
 libQt5Widgets.so.5
@@ -30,4 +28,5 @@ libQt5Xml.so.5
 libQt5XmlPatterns.so.5
 libc.so.6
 libdbus-1.so.3
+libgcc_s.so.1
 libstdc++.so.6
