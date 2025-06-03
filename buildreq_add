@@ -11,7 +11,6 @@ python3-dev
 qscintilla
 qscintilla-dev
 qtbase-dev
-qtcanvas3d
 qtcharts-dev
 qtconnectivity-dev
 qtdeclarative-dev
